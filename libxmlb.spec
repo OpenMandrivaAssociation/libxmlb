@@ -28,7 +28,7 @@ This allows an application to mmap the binary XML file, do an XPath query and
 return some strings without actually parsing the entire document. This is all
 done using (almost) zero allocations and no actual copying of the binary data.
 
-%libpackage %{name} %{major}
+%libpackage xmlb %{major}
 
 %package devel
 Summary:	Development package for %{name}
