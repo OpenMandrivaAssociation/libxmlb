@@ -44,7 +44,7 @@ Files for development with %{name}.
 %build
 %meson \
     -Dgtkdoc=true \
-    -Dtests=true
+    -Dtests=false
 
 %meson_build
 
