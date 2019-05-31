@@ -53,6 +53,7 @@ Files for development with %{name}.
 
 %install
 %meson_install
+rm -rf %{buildroot}%{_datadir}/installed-tests
 
 %files
 %doc README.md
