@@ -68,6 +68,6 @@ rm -rf %{buildroot}%{_datadir}/installed-tests
 %dir %{_datadir}/gtk-doc
 %dir %{_datadir}/gtk-doc/html
 %{_datadir}/gtk-doc/html/libxmlb
-%{_includedir}/libxmlb-1
+%{_includedir}/libxmlb-%{major}
 %{_libdir}/libxmlb.so
 %{_libdir}/pkgconfig/xmlb.pc
