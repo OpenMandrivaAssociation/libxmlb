@@ -1,4 +1,4 @@
-%define major 1
+%define major 2
 
 Summary:	Library for querying compressed XML metadata
 Name:		libxmlb
