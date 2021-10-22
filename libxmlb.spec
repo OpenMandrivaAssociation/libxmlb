@@ -2,7 +2,7 @@
 
 Summary:	Library for querying compressed XML metadata
 Name:		libxmlb
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -14,6 +14,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	meson
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
+BuildRequires:	pkgconfig(liblzma)
 # needed for the self tests
 BuildRequires:	pkgconfig(shared-mime-info)
 Requires:	shared-mime-info
