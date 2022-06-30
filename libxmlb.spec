@@ -2,7 +2,7 @@
 
 Summary:	Library for querying compressed XML metadata
 Name:		libxmlb
-Version:	0.3.7
+Version:	0.3.9
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -59,15 +59,13 @@ rm -rf %{buildroot}%{_datadir}/installed-tests
 %files
 %doc README.md
 %license LICENSE
-%{_libexecdir}/xb-tool
-%dir %{_libdir}/girepository-1.0
+%{_bindir}/xb-tool
 %{_libdir}/girepository-1.0/*.typelib
+%{_mandir}/man1/xb-tool.1*
 
 %files devel
 %dir %{_datadir}/gir-1.0
 %{_datadir}/gir-1.0/*.gir
-%dir %{_datadir}/gtk-doc
-%dir %{_datadir}/gtk-doc/html
 %{_datadir}/gtk-doc/html/libxmlb
 %{_includedir}/libxmlb-%{major}
 %{_libdir}/libxmlb.so
