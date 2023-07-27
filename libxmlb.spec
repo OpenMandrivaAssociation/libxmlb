@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(uuid)
 BuildRequires:	meson
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(liblzma)
+BuildRequires:  pkgconfig(libzstd)
 # needed for the self tests
 BuildRequires:	pkgconfig(shared-mime-info)
 Requires:	shared-mime-info
