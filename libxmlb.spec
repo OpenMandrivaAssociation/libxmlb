@@ -3,7 +3,7 @@
 Summary:	Library for querying compressed XML metadata
 Name:		libxmlb
 Version:	0.3.14
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 URL:		https://github.com/hughsie/libxmlb
@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(uuid)
 BuildRequires:	meson
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(liblzma)
-BuildRequires:  pkgconfig(libzstd)
+BuildRequires:	pkgconfig(libzstd)
 # needed for the self tests
 BuildRequires:	pkgconfig(shared-mime-info)
 Requires:	shared-mime-info
@@ -63,7 +63,7 @@ rm -rf %{buildroot}%{_datadir}/installed-tests
 %license LICENSE
 %{_bindir}/xb-tool
 %{_libdir}/girepository-1.0/*.typelib
-%{_mandir}/man1/xb-tool.1*
+%doc %{_mandir}/man1/xb-tool.1*
 
 %files devel
 %dir %{_datadir}/gir-1.0
