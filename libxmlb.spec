@@ -2,7 +2,7 @@
 
 Summary:	Library for querying compressed XML metadata
 Name:		libxmlb
-Version:	0.3.21
+Version:	0.3.22
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
