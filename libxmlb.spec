@@ -1,5 +1,8 @@
 %define major 2
 
+# For bootstrapping, see crossbuild
+%bcond_without gir
+
 Summary:	Library for querying compressed XML metadata
 Name:		libxmlb
 Version:	0.3.24
@@ -14,7 +17,9 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	meson
+%if %{with gir}
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
+%endif
 BuildRequires:	pkgconfig(liblzma)
 BuildRequires:	pkgconfig(libzstd)
 # needed for the self tests
@@ -46,6 +51,9 @@ Files for development with %{name}.
 
 %build
 %meson \
+%if ! %{with gir}
+    -Dintrospection=false \
+%endif
     -Dgtkdoc=true \
     -Dtests=false
 
@@ -62,12 +70,16 @@ rm -rf %{buildroot}%{_datadir}/installed-tests
 %doc README.md
 %license LICENSE
 %{_bindir}/xb-tool
+%if %{with gir}
 %{_libdir}/girepository-1.0/*.typelib
+%endif
 %doc %{_mandir}/man1/xb-tool.1*
 
 %files devel
+%if %{with gir}
 %dir %{_datadir}/gir-1.0
 %{_datadir}/gir-1.0/*.gir
+%endif
 %{_datadir}/gtk-doc/html/libxmlb
 %{_includedir}/libxmlb-%{major}
 %{_libdir}/libxmlb.so
